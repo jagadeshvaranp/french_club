@@ -16,8 +16,8 @@ const productsData = [
       "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80"
     ],
-    price: 999,
-    mrp: 1499,
+    price: 99,
+    mrp: 1499, 
     sizes: [
       { size: "S", stock: 12 },
       { size: "M", stock: 20 },
