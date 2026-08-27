@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '', // Relative base URL resolves via Vite server proxy configuration
+  baseURL: import.meta.env.VITE_API_URL || '', // Support dynamic backend URL in production
 });
 
 // Request interceptor to inject Authorization header
