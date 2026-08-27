@@ -1001,7 +1001,10 @@ const mockAdapter = (config) => {
   });
 };
 
-// Hook our custom adapter to the Axios instance
-api.defaults.adapter = mockAdapter;
+// Hook our custom adapter to the Axios instance (enabled by default in dev, disabled in prod unless forced)
+const useMock = import.meta.env.VITE_USE_MOCK !== 'false' && (import.meta.env.NODE_ENV !== 'production' || import.meta.env.VITE_USE_MOCK === 'true');
+if (useMock) {
+  api.defaults.adapter = mockAdapter;
+}
 
 export default api;
